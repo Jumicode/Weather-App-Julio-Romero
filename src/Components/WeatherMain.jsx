@@ -1,5 +1,5 @@
 import React from 'react';
-import {useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import  '../Styles/WeatherMain.scss'
 
 import WeatherSearch from './WeatherSearch';
@@ -15,11 +15,10 @@ const {Main,city,wind,Weather,forecast} = useSelector((state) => state.weather)
 
 
 
-
  return (
 
 
-        <div className='Container'>
+        <div data-testid='weather-main'  className='Container'>
  {/* eslint-disable */}
 {Weather == false?(
         <><WeatherSearch></WeatherSearch><h1 className='message'>Please search city</h1></>
@@ -29,7 +28,7 @@ const {Main,city,wind,Weather,forecast} = useSelector((state) => state.weather)
                                  <><WeatherSearch></WeatherSearch><section className='MainCard'>
 
 
-                                         <img src={`http://openweathermap.org/img/wn/${Weather.icon}.png`} alt='weatherIcon'></img>
+                                         <img data-testid="weather-icon"  src={`http://openweathermap.org/img/wn/${Weather.icon}.png`} alt='weatherIcon'></img>
 
                                          <h1>{Main.temp}ºC</h1>
 

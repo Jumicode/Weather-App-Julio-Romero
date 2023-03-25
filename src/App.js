@@ -4,17 +4,9 @@ import WeatherMain from "./Components/WeatherMain";
 
 function App() {
 
-
-
-
-  
   return (
     <div >
 <WeatherMain ></WeatherMain>
-
-
-  
-
     </div>
   );
 }
