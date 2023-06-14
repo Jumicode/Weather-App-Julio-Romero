@@ -1,9 +1,10 @@
-import {  render, screen} from '@testing-library/react';
+import {  render, fireEvent} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect'; 
 import App from './App';
 import { store } from './app/Store/Store';
 import { Provider } from 'react-redux';
 import WeatherMain from './Components/WeatherMain';
+import WeatherSearch from './Components/WeatherSearch';
 
 
 describe('REACT - We test the components', () =>{
@@ -30,9 +31,22 @@ test('should render WeatherMain component',() =>{
 })
 
 
+})
 
+describe('REACT-WeatherSearch test',() =>{
+  test('We test the WeatherSearch component',() =>{
+    const r = render(
+<Provider store={store}>
+      <WeatherSearch></WeatherSearch>
+      </Provider>
+    );
+    expect(r).toBeDefined();
+  })
 
-
+  test('User input test',() =>{
+    const { getByLabelText, getByText } = render(<WeatherSearch />);
+    
+  })
 })
 
 
