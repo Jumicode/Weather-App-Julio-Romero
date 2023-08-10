@@ -200,14 +200,15 @@ h1{
 
 
 .Container{
-   padding-left: 10px;
+    display: flex;
+  flex-direction:inherit;
 }
 
 
 .message{
  position: relative;
  top: 20rem;
- right: 30px;
+ 
 }
 
 
@@ -215,9 +216,6 @@ h1{
 .MainCard{
   
 height: 5%;
-margin: 0;
-padding: 15px;
-margin-right: -30px;
 
 
 
